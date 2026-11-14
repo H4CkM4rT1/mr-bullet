@@ -1,0 +1,1 @@
+Murphy es un ex espía que combate contra soldados zombis, para poder encontrar la cura los zombis, dale click para disparar las balas y alejar a los enemigos, muevete con las flechitas y wasd, agradecimientos para Amir, Nogales, Cesar, Evan y Nahym 
