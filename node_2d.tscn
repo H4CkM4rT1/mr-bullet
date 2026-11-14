@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://1q8t0ekqh7am"]
 
 [ext_resource type="PackedScene" uid="uid://dbcng2igkpr6y" path="res://player.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://dxqfg3448cl0c" path="res://spawner.tscn" id="3_epypp"]
 [ext_resource type="Texture2D" uid="uid://dihni61o0eybh" path="res://WhatsApp Image 2026-11-14 at 2.46.57 PM.jpeg" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://2gtqkshcd2ov" path="res://enemy.tscn" id="4_q6r6c"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0e48y"]
 a = Vector2(15.033331, -15.733334)
@@ -45,3 +47,7 @@ shape = SubResource("SegmentShape2D_epypp")
 position = Vector2(-1, 1337)
 scale = Vector2(30, 30)
 shape = SubResource("SegmentShape2D_epypp")
+
+[node name="Spawner" parent="." unique_id=1373735131 instance=ExtResource("3_epypp")]
+position = Vector2(1112, 455)
+escena = ExtResource("4_q6r6c")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://2gtqkshcd2ov"]
+
+[ext_resource type="Script" uid="uid://lmydk5idk30t" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://b36my3fvkcf5d" path="res://soldado_transparent.png" id="2_4gyqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x15ge"]
+size = Vector2(101, 251)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=114193168 groups=["Enemy"]]
+collision_layer = 9
+collision_mask = 4
+script = ExtResource("1_7k104")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018667299 groups=["Enemy"]]
+position = Vector2(-20.999998, -181)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_4gyqm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=296283543 groups=["Enemy"]]
+position = Vector2(-59, -145)
+shape = SubResource("RectangleShape2D_x15ge")
