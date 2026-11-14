@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var speed: float = 150.0
 @export var health: int = 1
 
+var player: Node2D = null
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
