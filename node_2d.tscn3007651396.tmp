@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://1q8t0ekqh7am"]
+
+[ext_resource type="Script" uid="uid://chbri3snrc8qr" path="res://player.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cqtq5121vr41t" path="res://icon.svg" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://p42ps4nk0vul" path="res://bala.tscn" id="2_epypp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8aw3"]
+radius = 77.7946
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5bk5"]
+
+[node name="Node2D" type="Node2D" unique_id=1516180832]
+visibility_layer = 3
+position = Vector2(7, 0)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=483430913]
+collision_layer = 3
+script = ExtResource("1_wtcfe")
+bala = ExtResource("2_epypp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2082535172]
+texture = ExtResource("2_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=544973286]
+shape = SubResource("CircleShape2D_j8aw3")
+
+[node name="Pared" type="StaticBody2D" parent="." unique_id=1376303745]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared" unique_id=2119810168]
+position = Vector2(889.00006, 21)
+scale = Vector2(30, 30)
+shape = SubResource("RectangleShape2D_u5bk5")

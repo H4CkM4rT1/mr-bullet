@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://p42ps4nk0vul"]
 
 [ext_resource type="Script" uid="uid://bmjupuidaisqi" path="res://bala.gd" id="1_jk513"]
-[ext_resource type="Texture2D" uid="uid://cqtq5121vr41t" path="res://icon.svg" id="2_ag3k0"]
+[ext_resource type="Texture2D" uid="uid://cum0grgusgnf8" path="res://bala_transparent.png" id="2_ag3k0"]
 
-[node name="Bala" type="Node2D" unique_id=1597418405]
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4wd0"]
+
+[node name="Bala" type="CharacterBody2D" unique_id=943830987]
 script = ExtResource("1_jk513")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1774593597]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771952177]
+shape = SubResource("CircleShape2D_t4wd0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=771952177]
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1911404781]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1911404781]
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_ag3k0")
