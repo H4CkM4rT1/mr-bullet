@@ -1,35 +1,47 @@
 [gd_scene format=3 uid="uid://1q8t0ekqh7am"]
 
-[ext_resource type="Script" uid="uid://chbri3snrc8qr" path="res://player.gd" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://p42ps4nk0vul" path="res://bala.tscn" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://ctq3ggp32rbal" path="res://pendejo 2_transparent.png" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://dbcng2igkpr6y" path="res://player.tscn" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dihni61o0eybh" path="res://WhatsApp Image 2026-11-14 at 2.46.57 PM.jpeg" id="4_0hol4"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j8aw3"]
-radius = 77.7946
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0e48y"]
+a = Vector2(15.033331, -15.733334)
+b = Vector2(15.166666, 13.233334)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5bk5"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_epypp"]
+a = Vector2(4.4666653, -13.200003)
+b = Vector2(46, -13.300002)
 
 [node name="Node2D" type="Node2D" unique_id=1516180832]
 visibility_layer = 7
-position = Vector2(7, 0)
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=483430913]
-collision_layer = 3
-script = ExtResource("1_wtcfe")
-bala = ExtResource("2_epypp")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513133938]
+position = Vector2(756, 479)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_0hol4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2082535172]
-position = Vector2(-1, 15.000001)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_epypp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=544973286]
-shape = SubResource("CircleShape2D_j8aw3")
+[node name="Player" parent="." unique_id=1434328733 instance=ExtResource("2_0e48y")]
+position = Vector2(305, 472)
 
 [node name="Pared" type="StaticBody2D" parent="." unique_id=1376303745]
-collision_mask = 6
+collision_layer = 17
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pared" unique_id=2119810168]
-position = Vector2(889.00006, 21)
+position = Vector2(900, 515)
 scale = Vector2(30, 30)
-shape = SubResource("RectangleShape2D_u5bk5")
+shape = SubResource("SegmentShape2D_0e48y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pared" unique_id=1785563368]
+position = Vector2(-299, 512.00006)
+scale = Vector2(30, 30)
+shape = SubResource("SegmentShape2D_0e48y")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pared" unique_id=1665463452]
+position = Vector2(2.000061, 421.00006)
+scale = Vector2(30, 30)
+shape = SubResource("SegmentShape2D_epypp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Pared" unique_id=815289137]
+position = Vector2(-1, 1337)
+scale = Vector2(30, 30)
+shape = SubResource("SegmentShape2D_epypp")

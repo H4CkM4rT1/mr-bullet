@@ -5,15 +5,18 @@ extends CharacterBody2D
 
 var rebotes =  0
 
-func _ready():
-	velocity = Vector2.RIGHT.rotated(global_rotation) * velocidad
-	
+func configurar_direccion(direction: Vector2):
+	velocity = direction.normalized() * velocidad
+	look_at(global_position + direction)
+
+
 func _physics_process(delta):
 	var colision = move_and_collide(velocity * delta)
 	
 	if colision:
 		velocity = velocity.bounce(colision.get_normal())
 		rebotes += 1
+		look_at(global_position + velocity)
 		
 		if rebotes >= max_rebotes:
 			queue_free()

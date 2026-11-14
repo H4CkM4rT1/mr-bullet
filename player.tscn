@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dbcng2igkpr6y"]
+
+[ext_resource type="Script" uid="uid://chbri3snrc8qr" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://p42ps4nk0vul" path="res://bala.tscn" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://ctq3ggp32rbal" path="res://pendejo 2_transparent.png" id="3_sweqy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
+radius = 23.0
+height = 184.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1434328733]
+collision_layer = 19
+collision_mask = 20
+script = ExtResource("1_i3pqv")
+bala = ExtResource("2_hqtel")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=605861997]
+position = Vector2(0, -84)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_sweqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531435960]
+position = Vector2(-4, -95)
+shape = SubResource("CapsuleShape2D_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=257415253]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
